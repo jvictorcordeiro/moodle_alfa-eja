@@ -1,0 +1,162 @@
+@import 'login';
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#frontpage-1 h1,
+#frontpage-1 p,
+#frontpage-1 span {
+    color: white;
+}
+
+#frontpage-2 h1{
+    color: #8A04A1;
+}
+
+ul.list-frontpage {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.list-frontpage li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+ul.list-frontpage li::before {
+    content: '';
+    display: inline-block;
+    width: 1.45rem;
+    height: 1.45rem;
+    flex-shrink: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ul.list-frontpage li:nth-child(2)::before {
+    background-image: url('[[pix:theme|icon_relogio]]');
+}
+
+ul.list-frontpage li:nth-child(3)::before {
+    background-image: url('[[pix:theme|icon_computador]]');
+}
+
+ul.list-frontpage li:nth-child(4)::before {
+    background-image: url('[[pix:theme|icon_aula]]');
+}
+
+ul.list-frontpage li:nth-child(5)::before {
+    background-image: url('[[pix:theme|icon_pessoa]]');
+}
+
+ul.list-frontpage li:nth-child(6)::before {
+    background-image: url('[[pix:theme|icon_certificado]]');
+}
+// Cartão geral
+.curso-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: box-shadow 0.2s, transform 0.2s;
+    &:hover {
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        transform: translateY(-4px);
+    }
+    .card-body {
+        padding: 1.25rem;
+    }
+}
+.curso-img {
+    height: 160px;
+    object-fit: cover;
+    width: 100%;
+}
+.curso-info .info-item {
+    font-size: 0.95rem;
+    color: #8A04A1;
+}
+.progress-bar {
+    background-color: #8A04A1 !important;
+}
+.autor-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+}
+.curso-autor {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+// Esconde título, filtros e botões padrão do bloco myoverview
+[data-block="myoverview"] > h2, /* Título antigo */
+[data-block="myoverview"] .header, /* Header antigo */
+[data-block="myoverview"] .buttons, /* Botões antigos */
+[data-block="myoverview"] .card-deck-container > h3, /* Subtítulo antigo */
+[data-block="myoverview"] .card-deck-container > .d-flex, /* Filtros antigos */
+[data-block="myoverview"] .card-deck-container > .btn-group, /* Botões antigos */
+[data-block="myoverview"] .card-deck-container > .btn, /* Botões antigos */
+[data-block="myoverview"] .card-deck-container > .dropdown, /* Dropdowns antigos */
+[data-block="myoverview"] .card-deck-container > .form-control, /* Busca antiga */
+[data-block="myoverview"] .card-deck-container > .form-select, /* Selects antigos */
+[data-block="myoverview"] .card-deck-container > .course-search-panel, /* Painel de busca novo */
+[data-block="myoverview"] .card-deck-container > .course-search-panel + .d-flex /* Filtros logo após busca */
+{
+    display: none !important;
+}
+
+.container-curso-lista {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo-meu-aprendizado {
+    color: #8A04A1;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.filtros-curso {
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.filtros-curso input,
+.filtros-curso select {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    min-width: 180px;
+}
+
+.card-grid {
+    gap: 2rem 1.5rem;
+}
+
+/* Esconde o título antigo "Resumo dos cursos" */
+.block-myoverview h3[id^="instance-"][class*="card-title"] {
+    display: none !important;
+}
+
+/* Esconde a linha horizontal logo abaixo do título */
+.block-myoverview hr.mt-0 {
+    display: none !important;
+}
+
+/* Esconde o bloco de filtros/botões antigos */
+.block-myoverview [role="search"][data-region="filters"] {
+    display: none !important;
+}
+  
